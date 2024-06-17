@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "ged-web-parts-spectrum-client-side-solution",
+    "id": "762fc3f3-0735-473f-bcf7-e642d01ecd42",
+    "version": "1.0.0.1",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": "Undefined-1.18.2"
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "ged-web-parts-spectrum "
+      },
+      "longDescription": {
+        "default": "ged-web-parts-spectrum "
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "ged-web-parts-spectrum Feature",
+        "description": "The feature that activates elements of the ged-web-parts-spectrum solution.",
+        "id": "7923b3cb-22cd-4a64-9d94-f2e2261e6998",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/ged-web-parts-spectrum.sppkg"
+  }
+}

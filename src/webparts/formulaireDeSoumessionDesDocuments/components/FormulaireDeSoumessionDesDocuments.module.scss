@@ -1,0 +1,302 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.formulaireDeSoumessionDesDocuments {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+.inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.myButton {
+  margin-left: 10px;
+}
+.list_img {
+  max-width: 100px !important;
+}
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    color: "[theme:link, default:#03787c]";
+    color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      color: "[theme:linkHovered, default: #014446]";
+      color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+.modalContainer {
+  background-color: #ffffff; /* Fond blanc */
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  height: 100%;
+  width: 45vw;
+  right: 0px;
+  position: absolute;
+}
+
+.modalHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  min-height: 12%;
+}
+
+.modalBody {
+  padding: 8px 0px;
+  margin-bottom: 10px;
+  min-height: 84%;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  min-height: 30px;
+}
+
+// Styles pour le TextField
+.text-field, .select-field {
+  border: 2px solid #faf9f8;
+  border-radius: 2px;
+  background-color: #faf9f8;
+  font-size: 14px;
+  padding: 6px 4px 7px 4px;
+  width: 100%;
+  transition: background-color .2s ease, padding-left .2s ease;
+}
+.field-wrapper {
+  border: 1px solid;
+  border-radius: 4px;
+  border-color: #c8c6c4 #c8c6c4 #605e5c #c8c6c4;
+}
+.field-group {
+  box-shadow: none;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 2px;
+  background: rgb(255, 255, 255);
+  cursor: text;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  position: relative;
+}
+
+.ms-Button {
+  background-color: #444444; /* Fond gris foncé */
+  margin-right: 5px;
+}
+
+.cancelButton {
+  background-color: #ffffff; /* Fond blanc */
+  margin-right: 5px;
+}
+
+.ms-Dialog-main .ms-Modal-scrollableContent {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.button {
+  margin-right: 5px;
+}
+
+.buttonRounded {
+  border-radius: 25px;
+}
+.buttonSemiRounded {
+  border-radius: 10px;
+}
+.buttonStrict {
+  border-radius: 0px;
+}
+.card_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgb(238, 238, 238);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 0 20px 20px 20px;
+  width: calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+.align-right-items {
+  display: flex;
+  justify-content: flex-end;
+}
+.card h3 {
+  color: #333;
+}
+
+.cardContent {
+  color: #666;
+  text-align: left;
+}
+
+.cardContent strong {
+  color: #000;
+}
+
+.checkbox-field {
+  display: inline-block;
+  width: auto;
+  margin-right: 10px;
+  cursor: pointer;
+  
+  input[type="checkbox"] {
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  label {
+    margin-left: 5px;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+}
+
+
+
+.actionDropdown {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.editPanel {
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initial position outside the viewport */
+  width: 300px; /* Width of the edit panel */
+  height: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: right 0.3s ease; /* Smooth transition effect */
+  z-index: 1000; /* Ensure the edit panel appears above other content */
+}
+
+.showEditPanel {
+  right: 0; /* Slide the edit panel into view */
+}
+
+.editPanelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #f0f0f0;
+}
+
+.editPanelBody {
+  padding: 20px;
+}
+
+.editPanelFooter {
+  padding: 10px;
+  background-color: #f0f0f0;
+  text-align: right;
+}
+.slideRight {
+  animation: slideRight 0.3s ease;
+}
+
+@keyframes slideRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* ButtonTypeSelector styles */
+.buttonTypeSelector {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 10px;
+}
+
+.option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.option.selected {
+  border-color: #0078d4;
+  background-color: #e6f7ff;
+}
+
+.option .iconSans,
+.option .iconNormal,
+.option .iconLarge {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+.iconSans {
+  border: 1px solid #000;
+}
+
+.iconNormal {
+  border: 2px solid #000;
+  border-radius: 10px;
+}
+
+.iconLarge {
+  border: 2px solid #000;
+  border-radius: 20px;
+}
+
+.option span {
+  font-size: 12px;
+  color: #333;
+}
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+}
+.myButton {
+  width: 100%;
+}
