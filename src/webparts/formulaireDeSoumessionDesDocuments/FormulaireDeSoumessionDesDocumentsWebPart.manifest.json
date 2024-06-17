@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "79c5095a-3124-4817-a827-40ef1d69fd44",
+  "alias": "FormulaireDeSoumessionDesDocumentsWebPar",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Advanced" },
+    "title": { "default": "Formulaire De Soumession Des Documents" },
+    "description": { "default": "Formulaire De Soumession Des Documents description" },
+    "officeFabricIconFontName": "TaskAdd",
+    "properties": {
+      "description": "Formulaire De Soumession Des Documents"
+    }
+  }]
+}

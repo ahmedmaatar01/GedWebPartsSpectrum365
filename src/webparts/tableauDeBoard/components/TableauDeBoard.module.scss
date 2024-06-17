@@ -1,0 +1,167 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.tableauDeBoard {
+  overflow: hidden;
+  padding: 1em;
+  color: "[theme:bodyText, default: #323130]";
+  color: var(--bodyText);
+
+  &.teams {
+    font-family: $ms-font-family-fallbacks;
+  }
+}
+
+
+
+
+
+.list_img {
+  max-width: 100px !important;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.welcomeImage {
+  width: 100%;
+  max-width: 420px;
+}
+
+.links {
+  a {
+    text-decoration: none;
+    // color: "[theme:link, default:#03787c]";
+    // color: var(--link); // note: CSS Custom Properties support is limited to modern browsers only
+
+    &:hover {
+      text-decoration: underline;
+      // color: "[theme:linkHovered, default: #014446]";
+      // color: var(--linkHovered); // note: CSS Custom Properties support is limited to modern browsers only
+    }
+  }
+}
+
+// .modalContainer {
+//   /* Define your modal container styles here */
+//   display: flex;
+//   flex-direction: column;
+//   background-color: white;
+//   padding: 20px;
+//   border-radius: 5px;
+//   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+// }
+
+// .modalHeader {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   margin-bottom: 10px;
+// }
+
+// .modalBody {
+//   margin-bottom: 10px;
+// }
+
+// .modalFooter {
+//   display: flex;
+//   justify-content: flex-end;
+// }
+.webpartContainer{
+  padding: 20px;
+  border-radius: 10px;
+}
+.webpartContainer h5{
+  font-size: 14px;
+}
+.kpi{
+  font-size: 42px;
+  font-weight: 700;
+}
+
+/* Define table styles */
+
+.table-section {
+  padding: 10px;
+
+  table {
+    border-collapse: separate !important;
+    border-spacing: 0 10px;
+    width: 100%;
+  }
+
+  th,
+  td {
+    padding: 5px 20px;
+    text-align: left;
+    font-size: 12px;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  }
+
+  .document-a {
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  }
+
+  .document-a:hover {
+    font-weight: 700;
+  }
+
+  tbody tr {
+    background-color: #ffffff12;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+  }
+
+  tbody tr:hover {
+    background-color: #f5f5f576;
+  }
+
+  .table-section th {
+    text-align: left;
+    text-transform: capitalize;
+  }
+
+  td:first-child {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+
+  td:last-child {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+
+.breadcrumbPersonaliser {
+
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+}
+
+.breadcrumbPersonaliser li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbPersonaliser li a {
+  padding: .1rem .1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color .3s ease;
+  text-transform: capitalize;
+}
+
+.breadcrumbPersonaliser li a:hover {
+  font-weight: 700;
+}

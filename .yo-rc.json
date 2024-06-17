@@ -1,0 +1,21 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "plusBeta": false,
+    "isCreatingSolution": false,
+    "nodeVersion": "18.18.0",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.18.2",
+    "libraryName": "ged-web-parts-spectrum",
+    "libraryId": "762fc3f3-0735-473f-bcf7-e642d01ecd42",
+    "environment": "spo",
+    "packageManager": "npm",
+    "solutionName": "ged-web-parts-spectrum",
+    "solutionShortDescription": "ged-web-parts-spectrum description",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart"
+  }
+}

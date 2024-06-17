@@ -1,0 +1,33 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+.ged365Webpart {
+  padding: 10px;
+  font-family: 'Arial', sans-serif;
+  .webpartContainer {
+    background-color: #2e3a59;
+    border-radius: 10px;
+    padding: 20px;
+    color: #fff;
+  }
+  h4 {
+    color: #fff;
+  }
+  .documentList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    li {
+      display: flex;
+      align-items: center;
+      background-color: #3c4a70;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      padding: 10px;
+      .icon {
+        margin-right: 10px;
+      }
+      .details {
+        flex-grow: 1;
+      }
+    }
+  }
+}

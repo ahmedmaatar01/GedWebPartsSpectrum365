@@ -1,0 +1,21 @@
+.documentItem {
+    display: flex;
+    align-items: center;
+    background-color: #3c4a70;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+  
+    .icon {
+      margin-right: 10px;
+    }
+  
+    .details {
+      flex-grow: 1;
+    }
+  
+    .more {
+      margin-left: auto;
+    }
+  }
+  

@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "2f1b215a-e7a7-47da-ba11-7b75a59c9b8f",
+  "alias": "BarreDeRechercheWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Advanced" },
+    "title": { "default": "Barre de Recherche" },
+    "description": { "default": "Barre de Recherche description" },
+    "officeFabricIconFontName": "Search",
+    "properties": {
+      "description": "Barre de Recherche"
+    }
+  }]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "tableau-de-board-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/tableauDeBoard/TableauDeBoardWebPart.js",
+          "manifest": "./src/webparts/tableauDeBoard/TableauDeBoardWebPart.manifest.json"
+        }
+      ]
+    },
+    "formulaire-de-soumession-des-documents-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/formulaireDeSoumessionDesDocuments/FormulaireDeSoumessionDesDocumentsWebPart.js",
+          "manifest": "./src/webparts/formulaireDeSoumessionDesDocuments/FormulaireDeSoumessionDesDocumentsWebPart.manifest.json"
+        }
+      ]
+    },
+    "barre-de-recherche-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/barreDeRecherche/BarreDeRechercheWebPart.js",
+          "manifest": "./src/webparts/barreDeRecherche/BarreDeRechercheWebPart.manifest.json"
+        }
+      ]
+    },
+    "documents-recents-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/documentsRecents/DocumentsRecentsWebPart.js",
+          "manifest": "./src/webparts/documentsRecents/DocumentsRecentsWebPart.manifest.json"
+        }
+      ]
+    },
+    "notifications-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/notifications/NotificationsWebPart.js",
+          "manifest": "./src/webparts/notifications/NotificationsWebPart.manifest.json"
+        }
+      ]
+    }
+  },
+  "externals": {},
+  "localizedResources": {
+    "TableauDeBoardWebPartStrings": "lib/webparts/tableauDeBoard/loc/{locale}.js",
+    "FormulaireDeSoumessionDesDocumentsWebPartStrings": "lib/webparts/formulaireDeSoumessionDesDocuments/loc/{locale}.js",
+    "BarreDeRechercheWebPartStrings": "lib/webparts/barreDeRecherche/loc/{locale}.js",
+    "DocumentsRecentsWebPartStrings": "lib/webparts/documentsRecents/loc/{locale}.js",
+    "NotificationsWebPartStrings": "lib/webparts/notifications/loc/{locale}.js",
+    "PropertyControlStrings": "node_modules/@pnp/spfx-property-controls/lib/loc/{locale}.js"
+  }
+}

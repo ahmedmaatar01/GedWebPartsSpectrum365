@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "65e18e0e-7fe2-4f9c-9fec-be8e7d92aaf0",
+  "alias": "DocumentsRecentsWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart", "TeamsPersonalApp", "TeamsTab", "SharePointFullPage"],
+  "supportsThemeVariants": true,
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", 
+    "group": { "default": "Advanced" },
+    "title": { "default": "Documents Recents" },
+    "description": { "default": "Documents Recents description" },
+    "officeFabricIconFontName": "Recent",
+    "properties": {
+      "description": "Documents Recents"
+    }
+  }]
+}
