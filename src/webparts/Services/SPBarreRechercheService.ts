@@ -6,6 +6,7 @@ export interface SPListItem {
   ID: string;
   Title: string;
   FileLeafRef: string;
+  Library: string;
   [key: string]: any;
 }
 
@@ -37,13 +38,38 @@ export class SPOperations {
     });
   }
 
+  
+
+  public GetListFields(context: WebPartContext, libraryTitle: string): Promise<any[]> {
+    const restApiUrl = `${context.pageContext.web.absoluteUrl}/_api/web/lists/getbytitle('${libraryTitle}')/fields?$filter=Hidden eq false`;
+    return new Promise<any[]>((resolve, reject) => {
+      context.spHttpClient.get(restApiUrl, SPHttpClient.configurations.v1).then(
+        (response: SPHttpClientResponse) => {
+          response.json().then((result: any) => {
+            resolve(result.value);
+          }).catch((error: any) => {
+            reject("Error parsing response: " + error);
+          });
+        },
+        (error: any): void => {
+          reject("Error fetching fields: " + error);
+        }
+      ).catch((error: any) => {
+        reject("Error making request: " + error);
+      });
+    });
+  }
+  
+
+
   public GetListItems(context: WebPartContext, title: string): Promise<SPListItem[]> {
-    const restApiUrl: string = `${context.pageContext.web.absoluteUrl}/_api/web/lists/getbytitle('${title}')/items?$select=ID,Title,FileLeafRef&$filter=FSObjType eq 0`;
+    const restApiUrl: string = `${context.pageContext.web.absoluteUrl}/_api/web/lists/getbytitle('${title}')/items?$select=*,ID,Title,FileLeafRef&$filter=FSObjType eq 0`;
     return new Promise<SPListItem[]>((resolve, reject) => {
       context.spHttpClient.get(restApiUrl, SPHttpClient.configurations.v1).then(
         (response: SPHttpClientResponse) => {
           response.json().then((results: any) => {
-            resolve(results.value as SPListItem[]);
+            const itemsWithLibrary = results.value.map((item: any) => ({ ...item, Library: title }));
+            resolve(itemsWithLibrary as SPListItem[]);
           }).catch((error: any) => {
             reject("Error parsing response: " + error);
           });
@@ -56,5 +82,28 @@ export class SPOperations {
       });
     });
   }
+
+public GetListItemMetadata(context: WebPartContext, libraryTitle: string, itemId: number): Promise<any> {
+  const restApiUrl = `${context.pageContext.web.absoluteUrl}/_api/web/lists/getbytitle('${libraryTitle}')/items(${itemId})`;
+  return new Promise<any>((resolve, reject) => {
+    context.spHttpClient.get(restApiUrl, SPHttpClient.configurations.v1).then(
+      (response: SPHttpClientResponse) => {
+        response.json().then((result: any) => {
+          console.log("result jdida")
+          console.log(result)
+          resolve(result);
+        }).catch((error: any) => {
+          reject("Error parsing response: " + error);
+        });
+      },
+      (error: any): void => {
+        reject("Error fetching item metadata: " + error);
+      }
+    ).catch((error: any) => {
+      reject("Error making request: " + error);
+    });
+  });
+}
+
   
 }
